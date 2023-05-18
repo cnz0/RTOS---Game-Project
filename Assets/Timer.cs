@@ -16,8 +16,12 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        current_time -= Time.deltaTime;
-        timer_text.text = current_time.ToString();
-        
+        if (current_time  >= 0)
+        {
+            current_time -= Time.deltaTime;
+            timer_text.text = current_time.ToString();   
+        }
+        if (current_time  <= 0)
+            timer_text.text = "00,00000";
     }
 }
