@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
         }
         if (current_time  <= 0) {
             timer_text.text = "00,00000";
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Lose");
         }
     }
 }
